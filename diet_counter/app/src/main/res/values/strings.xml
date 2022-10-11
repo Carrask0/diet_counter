@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Diet Counter</string>
+    <string name="kcal">kcal</string>
+    <string name="proteins">proteins</string>
+    <string name="carbohydrates">carbohydrates</string>
+    <string name="fats">fats</string>
+    <string name="x">x</string>
+    <string name="g">g</string>
+    <string name="grams">grams</string>
+    <string name="portions">portions</string>
+    <string name="selector_title">Select the food you wish to input</string>
+    <string name="nutritional_values">Nutritional values (100g): </string>
+    <string name="select_quantity">Select quantity:</string>
+    <string name="one_portion_equals">1 portion =</string>
+    <string name="add">ADD</string>
+    <string name="delete_all">DELETE ALL</string>
+    <string name="negative_number">The number must be greater than 0</string>
+    <string name="empty_string"></string>
+
+    <string name="egg">Egg</string>
+</resources>

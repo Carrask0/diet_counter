@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_infoCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/main_numKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="0"
+            android:textSize="40sp"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_tvKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kcal"
+
+            app:layout_constraintStart_toStartOf="@id/main_numKcal"
+            app:layout_constraintEnd_toEndOf="@id/main_numKcal"
+            app:layout_constraintTop_toBottomOf="@id/main_numKcal" />
+
+        <TextView
+            android:id="@+id/main_numProt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="0"
+            android:textSize="25sp"
+            android:textStyle="bold"
+
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toStartOf="@id/main_numCarbs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/main_tvKcal" />
+
+        <TextView
+            android:id="@+id/main_tvProt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proteins"
+
+            app:layout_constraintStart_toStartOf="@id/main_numProt"
+            app:layout_constraintEnd_toEndOf="@id/main_numProt"
+            app:layout_constraintTop_toBottomOf="@id/main_numProt" />
+
+        <TextView
+            android:id="@+id/main_numCarbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="0"
+            android:textSize="25sp"
+            android:textStyle="bold"
+
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/main_numFats"
+            app:layout_constraintStart_toEndOf="@id/main_numProt"
+            app:layout_constraintTop_toTopOf="@id/main_tvKcal" />
+
+        <TextView
+            android:id="@+id/main_tvCarbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/carbohydrates"
+
+            app:layout_constraintStart_toStartOf="@id/main_numCarbs"
+            app:layout_constraintEnd_toEndOf="@id/main_numCarbs"
+            app:layout_constraintTop_toBottomOf="@id/main_numProt" />
+
+        <TextView
+            android:id="@+id/main_numFats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="0"
+            android:textSize="25sp"
+            android:textStyle="bold"
+
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/main_numCarbs"
+            app:layout_constraintTop_toTopOf="@id/main_tvKcal" />
+
+        <TextView
+            android:id="@+id/main_tvFats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fats"
+
+            app:layout_constraintStart_toStartOf="@id/main_numFats"
+            app:layout_constraintEnd_toEndOf="@id/main_numFats"
+            app:layout_constraintTop_toBottomOf="@id/main_numFats" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_foodListRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        app:layout_constraintTop_toBottomOf="@id/main_infoCl"
+
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="50dp"
+
+        tools:listitem="@layout/item_food_entry"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_addBT"
+
+        android:src="@android:drawable/ic_input_add"
+
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/main_deleteBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/main_addBT"
+        app:layout_constraintEnd_toStartOf="@+id/main_addBT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_addBT"
+
+        android:text="@string/delete_all"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
